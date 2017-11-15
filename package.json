@@ -1,0 +1,23 @@
+{
+  "name": "hackerrankjs",
+  "version": "1.0.0",
+  "description": "hackerrank prblems solved in nodejs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahottie/hackerrankjs.git"
+  },
+  "author": "rahat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rahottie/hackerrankjs/issues"
+  },
+  "homepage": "https://github.com/rahottie/hackerrankjs#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  }
+}

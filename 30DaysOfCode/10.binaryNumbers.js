@@ -1,25 +1,34 @@
-let intToBinary = function(n){
+exports = {
+    hello: () =>{
+        return 'hello';
+    },
+    intToBinary,
+    numOfConsecutive
+};
+
+
+function intToBinary(n) {
     let i = parseInt(n);
     return i.toString(2);
 }
 
-let numOfConsecutive = function(str, toTest){
+function numOfConsecutive(str, toTest) {
     let n = 0;
     let current = 0;
     let arr = str.split('')
     //console.log(arr);
-    
-    for (let i = 0; i < arr.length; i++) {        
-        if(arr[i] === toTest){
-            if(current === 0){
-               current++; 
-               if(current > n) n = current;
-            } 
 
-            if(arr[i] === arr[i+1]) current++;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === toTest) {
+            if (current === 0) {
+                current++;
+                if (current > n) n = current;
+            }
+
+            if (arr[i] === arr[i + 1]) current++;
             else current = 0;
-        } 
-        if(current > n) n = current;
+        }
+        if (current > n) n = current;
     }
     return n;
 }
@@ -27,7 +36,7 @@ let numOfConsecutive = function(str, toTest){
 function main(n) {
     //var n = parseInt(readLine());
     var bin = intToBinary(n);
-    console.log(n +' - ' +bin + ' - ' +numOfConsecutive(bin, '1'));
+    console.log(n + ' - ' + bin + ' - ' + numOfConsecutive(bin, '1'));
 }
 
 main(5);

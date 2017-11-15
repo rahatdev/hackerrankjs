@@ -2,9 +2,9 @@
   "name": "hackerrankjs",
   "version": "1.0.0",
   "description": "hackerrank prblems solved in nodejs",
-  "main": "app.js",
+  "main": "./30DaysOfCode/10.binaryNumbers.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha || true"
   },
   "repository": {
     "type": "git",

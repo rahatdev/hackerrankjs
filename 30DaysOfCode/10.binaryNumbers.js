@@ -3,7 +3,6 @@ let intToBinary = function(n){
     return i.toString(2);
 }
 
-
 let numOfConsecutive = function(str, toTest){
     let n = 0;
     let current = 0;
@@ -40,9 +39,6 @@ main(110);
 main(323);
 main(45);
 main(0);
-
-
-
 
 //tests for intToBinary
 // console.log(intToBinary(5));

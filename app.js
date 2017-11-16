@@ -26,5 +26,7 @@ arr = gen.getSquare2dArray(6);
 gen.print2dArray(arr);
 sum = arr2d.highestHourGlassSum(arr);
 console.log("highest sum: " +sum);
+sum = arr2d.highestHourGlassShort(arr);
+console.log("highest sum (short): " +sum);
 
 

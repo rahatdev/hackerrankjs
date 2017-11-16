@@ -3,7 +3,8 @@ const gen = require('../shared/generator');
 module.exports = {
     main,
     sumHourglass,
-    highestHourGlassSum
+    highestHourGlassSum,
+    highestHourGlassShort
 }
 
 function main() {
@@ -14,7 +15,23 @@ function main() {
     // }
 
     let arr = gen.getSquare2dArray(6);    
-    console.log(highestHourGlassSum(arr));
+    //console.log(highestHourGlassSum(arr));
+    console.log(highestHourGlassShort(arr));
+}
+
+function highestHourGlassShort(arr){
+    let sumArr = [];
+    for(let i = 0; i < 4; i++){
+        for(let j = 0; j < 4; j++){
+            sumArr.push(
+                arr[i][j] + arr[i][j+1] + arr[i][j+2]
+                + arr[i+1][j+1]
+                + arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2]
+            )
+        }
+    }
+    sumArr.sort();
+    return sumArr.pop();
 }
 
 function sumHourglass(arr3x3){

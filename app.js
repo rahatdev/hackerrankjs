@@ -1,12 +1,14 @@
 // main entry point for tootling around and for testing.
 
 module.exports = function(){
-    return 'hellosd';
+    return 'hellos';
 }
 
-const 
-const arr2d = require('./30DaysOfCode/11.2dArrays');
+// const arr2d = require('./30DaysOfCode/11.2dArrays');
+const gen = require('./shared/generator');
+console.log(gen.getRandomInt(1,12));
 
-arr2d.main();
-// let n = arr2d.addsNumbers(4, 5);
-// console.log(n);
+let arr = gen.getSquare2dArray(9, 9);
+arr.forEach(element => {
+    console.log(element.join(' '));
+});

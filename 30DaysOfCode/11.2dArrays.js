@@ -3,7 +3,7 @@ module.exports = {
     addsNumbers
 }
 
-const gen = require('./generator');
+const gen = require('../shared/generator');
 
 function main() {
     var arr = [];

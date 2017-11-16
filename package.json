@@ -1,8 +1,8 @@
 {
   "name": "hackerrankjs",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "hackerrank prblems solved in nodejs",
-  "main": "./30DaysOfCode/10.binaryNumbers.js",
+  "main": "app.js",
   "scripts": {
     "test": "mocha || true"
   },

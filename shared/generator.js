@@ -2,7 +2,8 @@
 
 module.exports = {
     getSquare2dArray,
-    getRandomInt
+    getRandomInt,
+    print2dArray
 }
 
 function getSquare2dArray(size, maxValue) {
@@ -30,3 +31,14 @@ function getRandomInt(floor, ceiling) {
     return Math.floor(Math.random() * ceiling) + floor;
 }
 
+
+function print2dArray(arr){
+    try {
+        arr.forEach(row => {
+            console.log(row.join(' '));
+        });
+
+    } catch (err) {
+        return err;
+    }
+}

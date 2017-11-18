@@ -21,8 +21,8 @@ function main() {
 
 function highestHourGlassShort(arr){
     let sumArr = [];
-    for(let i = 0; i < 4; i++){
-        for(let j = 0; j < 4; j++){
+    for(let i = 0; i < arr.length - 2; i++){
+        for(let j = 0; j < arr.length - 2; j++){
             sumArr.push(
                 arr[i][j] + arr[i][j+1] + arr[i][j+2]
                 + arr[i+1][j+1]

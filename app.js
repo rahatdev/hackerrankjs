@@ -30,3 +30,12 @@ sum = arr2d.highestHourGlassShort(arr);
 console.log("highest sum (short): " +sum);
 
 
+arr = gen.getArray(6, 9);
+console.log(arr)
+arr.sort()
+console.log(arr)
+let distinct = Array.from(new Set(arr))
+console.log(distinct)
+
+
+

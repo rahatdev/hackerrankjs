@@ -1,6 +1,7 @@
 // input generator
 
 module.exports = {
+    getArray,
     getSquare2dArray,
     getRandomInt,
     print2dArray
@@ -20,6 +21,18 @@ function getSquare2dArray(size, maxValue) {
     }
 
     return arr;
+}
+
+function getArray(size, maxValue){
+    let max = 9
+    if(maxValue > 0) max = maxValue
+
+    let arr = []
+    for(let i = 0; i < size; i++){
+        arr[i] = getRandomInt(0, max)
+    }
+
+    return arr
 }
 
 function getRandomInt(floor, ceiling) {

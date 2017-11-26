@@ -38,4 +38,3 @@ let distinct = Array.from(new Set(arr))
 console.log(distinct)
 
 
-

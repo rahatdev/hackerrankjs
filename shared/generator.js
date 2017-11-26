@@ -1,11 +1,5 @@
 // input generator
 
-module.exports = {
-    getArray,
-    getSquare2dArray,
-    getRandomInt,
-    print2dArray
-}
 
 function getSquare2dArray(size, maxValue) {
     let max = 9;
@@ -54,4 +48,13 @@ function print2dArray(arr){
     } catch (err) {
         return err;
     }
+}
+
+
+
+module.exports = {
+    getArray,
+    getSquare2dArray,
+    getRandomInt,
+    print2dArray
 }

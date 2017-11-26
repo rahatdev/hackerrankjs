@@ -1,10 +1,10 @@
 
-function toBinary(i){
+const toBinary = (i)=>{
     if(i === 1) return '1'
     else if(i < 1) return '0'
+    return toBinary(parseInt(i/2)) + i%2
+}
 
-    let bin = ''
-    let left = parseInt(i/2)
-    let remainder = i%2
-    return toBinary(left) + remainder
+module.exports = {
+    toBinary
 }

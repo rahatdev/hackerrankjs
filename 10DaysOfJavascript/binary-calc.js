@@ -54,5 +54,9 @@ btnClr.onclick = () => {
 }
 
 btnEql.onclick = () => {
+    if(operand1 === '' || operator === '') return 
+    //todo - error case when no operand2 entered
+    //regex to get operand2 - in future, maybe the whole thing can be regex-ed
+    operand2 = res.split()
 
 }

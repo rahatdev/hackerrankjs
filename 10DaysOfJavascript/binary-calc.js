@@ -54,9 +54,89 @@ btnClr.onclick = () => {
 }
 
 btnEql.onclick = () => {
-    if(operand1 === '' || operator === '') return 
+    if (operand1 === '' || operator === '') return
     //todo - error case when no operand2 entered
     //regex to get operand2 - in future, maybe the whole thing can be regex-ed
-    operand2 = res.split()
+    let str = res.innerHTML
+    let re = /[\+\-\*\/]/
+    operand2 = str.substr(str.match(re).index + 1)
 
+    let result = ''
+
+    switch (operator) {
+        case '+':
+            result = binaryAdd(operand1, operand2)
+            break;
+        case '-':
+            result = binarySub(operand1, operand2)
+            break;
+        case '*':
+            result = binaryMult(operand1, operand2)
+            break;
+        case '/':
+            result = binaryDiv(operand1, operand2)
+            break;
+        default:
+            break;
+    }
+    console.log(result)
+    if (result !== '') {
+        res.innerHTML = result
+        operand1 = result
+        operator = ''
+        operand2 = ''
+    }
+
+}
+
+// math
+// TODO rewrite with bitwise
+function binaryAdd(x, y) {
+    let intx = binaryToInt(x)
+    let inty = binaryToInt(y)
+    let result = intx + inty
+    console.log(intx +' + ' +inty +' = ' +result)
+    return intToBinary(result)
+}
+
+function binarySub(x, y) {
+    let intx = binaryToInt(x)
+    let inty = binaryToInt(y)
+    let result = intx - inty
+    return intToBinary(result)
+}
+
+function binaryMult(x, y) {
+    let intx = binaryToInt(x)
+    let inty = binaryToInt(y)
+    let result = intx * inty
+    return intToBinary(result)
+}
+
+function binaryDiv(x, y) {
+    let intx = binaryToInt(x)
+    let inty = binaryToInt(y)
+    let result = intx / inty
+    return intToBinary(result)
+}
+
+//TODO error
+function binaryToInt(binary) {
+    let arr = binary.split('')
+    let num = 0
+    let maxBase = arr.length - 1
+    arr.forEach(b => {
+        if (maxBase <= 1) {
+            if (b === 1) num += 1
+        } else {
+            num += 2 ** (maxBase * b)
+            maxBase--
+        }
+    })
+    return num
+}
+
+function intToBinary(n) {
+    let i = parseInt(n);
+    return i.toString(2);
 }

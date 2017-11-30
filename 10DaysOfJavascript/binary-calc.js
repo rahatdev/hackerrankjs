@@ -86,57 +86,27 @@ btnEql.onclick = () => {
         operator = ''
         operand2 = ''
     }
-
 }
 
 // math
 // TODO rewrite with bitwise
 function binaryAdd(x, y) {
-    let intx = binaryToInt(x)
-    let inty = binaryToInt(y)
-    let result = intx + inty
-    console.log(intx +' + ' +inty +' = ' +result)
-    return intToBinary(result)
+    let result = parseInt(x, 2) + parseInt(y, 2)
+    return result.toString(2)
 }
 
 function binarySub(x, y) {
-    let intx = binaryToInt(x)
-    let inty = binaryToInt(y)
-    let result = intx - inty
-    return intToBinary(result)
+    let result = parseInt(x, 2) - parseInt(y, 2)
+    return result.toString(2)
 }
 
 function binaryMult(x, y) {
-    let intx = binaryToInt(x)
-    let inty = binaryToInt(y)
-    let result = intx * inty
-    return intToBinary(result)
+    let result = parseInt(x, 2) * parseInt(y, 2)
+    return result.toString(2)
 }
 
 function binaryDiv(x, y) {
-    let intx = binaryToInt(x)
-    let inty = binaryToInt(y)
-    let result = intx / inty
-    return intToBinary(result)
+    let result = parseInt(x, 2) / parseInt(y, 2)
+    return result.toString(2)
 }
 
-//TODO error
-function binaryToInt(binary) {
-    let arr = binary.split('')
-    let num = 0
-    let maxBase = arr.length - 1
-    arr.forEach(b => {
-        if (maxBase <= 1) {
-            if (b === 1) num += 1
-        } else {
-            num += 2 ** (maxBase * b)
-            maxBase--
-        }
-    })
-    return num
-}
-
-function intToBinary(n) {
-    let i = parseInt(n);
-    return i.toString(2);
-}

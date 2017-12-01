@@ -37,11 +37,11 @@ btnDiv.onclick = () => {
 }
 
 function addOp(op) {
-    if (operand1 !== '') return
+    if(res.innerHTML.length === 0) return
 
     if (operator === '') {
         operator = op
-        operand1 = res.innerHTML
+        if(operand1 === '') operand1 = res.innerHTML
         res.innerHTML += op
     }
 }

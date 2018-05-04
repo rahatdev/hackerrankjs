@@ -11,7 +11,7 @@ function getExponent(num, exponent) {
     //     passes ++
     // }
 
-    //OlogN
+    // OlogN
     let total = 1;
     while (exponent > 1) {
         if (exponent % 2 === 0) {
@@ -31,4 +31,15 @@ function getExponent(num, exponent) {
 }
 
 //console.log(getExponent(1,678987))
-console.log(getExponent(2, 25))
+//console.log(getExponent(2, 25))
+// -----------------------------------------------------------------------------
+
+//Given a funciton rand5() implement rand7
+const rand5 = () => Math.round(Math.random() * 5)
+
+function rand7() {
+    return Math.round(rand5() * 1.4)
+}
+console.log(rand7())
+
+
